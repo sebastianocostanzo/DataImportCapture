@@ -13,14 +13,14 @@ tasks:
         class_path: cumulusci.tasks.bulkdata.LoadData
         options:
             database_url: 'sqlite:///testdata/dev_org/test_data.db'
-            mapping: 'testdata/mapping.yml'
+            mapping: 'testdata/mapping_managed.yml'
 
     data_query:
         description: Query the demo data set into the org
         class_path: cumulusci.tasks.bulkdata.QueryData
         options:
             database_url: 'sqlite:///testdata/dev_org/test_data.db'
-            mapping: 'testdata/mapping.yml'
+            mapping: 'testdata/mapping_managed.yml'
 
 flows:
 
