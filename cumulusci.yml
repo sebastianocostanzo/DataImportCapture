@@ -1,0 +1,30 @@
+project:
+    name: DataIntegrationTemplate
+    package:
+        name:  DataIntegrationTemplate
+        api_version: '43.0'
+    dependencies:
+        - github: 'https://github.com/SalesforceFoundation/Cumulus'
+
+tasks:
+
+    template_data_dev_org:
+        description: 'Loads a sample data set for NPSP Data Import'
+        class_path: cumulusci.tasks.bulkdata.LoadData
+        options:
+            database_url: 'sqlite:///testdata/dev_org/test_data.db'
+            mapping: 'testdata/mapping.yml'
+
+    data_query:
+        description: Query the demo data set into the org
+        class_path: cumulusci.tasks.bulkdata.QueryData
+        options:
+            database_url: 'sqlite:///testdata/dev_org/test_data.db'
+            mapping: 'testdata/mapping.yml'
+
+flows:
+
+    config_qa:
+        steps:
+            4:
+                task: template_data_dev_org

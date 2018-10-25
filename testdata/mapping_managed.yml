@@ -1,0 +1,19 @@
+Insert NPSP Data Import:
+    sf_object: npsp__DataImport__c
+    table: ImportData
+    fields:
+        Id: sf_id
+        npsp__Account1_Country__c: country
+        npsp__Account1_Street__c: street
+        npsp__Account1_State_Province__c: state
+        npsp__Account1_City__c: city
+        npsp__Account1_Zip_Postal_Code__c: zip
+        npsp__Contact1_Salutation__c: salutation
+        npsp__Contact1_Firstname__c: first_name
+        npsp__Contact1_Lastname__c: last_name
+        npsp__Contact1_Personal_Email__c: email
+        npsp__Contact1_Mobile_Phone__c: phone
+        npsp__Contact1_Title__c: job_title
+        npsp__Donation_Amount__c: amount
+        npsp__Donation_Stage__c: stage_name
+        npsp__Donation_Date__c: close_date
